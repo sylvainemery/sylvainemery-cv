@@ -199,6 +199,14 @@
       .addtnlcontext {
         font-style: italic;
       }
+
+      .langtable {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+      .langtable > div {
+        margin-block-end: 0.5em;
+      }
     </style>
   </head>
 
@@ -461,15 +469,20 @@
             <span class="period">1994 - 1996</span>
           </h3>
         </section>
+      </section>
 
-        <section>
-          <h3>
-            <span class="company">Lyc&eacute;e Condorcet</span>
-            <span class="location">Limay</span>
-            <span class="position">Bac C</span>
-            <span class="period">1994</span>
-          </h3>
-        </section>
+      <section>
+        <h2 tabindex="0">Langues</h2>
+        <div class="langtable">
+        <div>
+            <div><strong>Français</strong></div>
+            <div>natal</div>
+        </div>
+        <div>
+            <div><strong>Anglais</strong></div>
+            <div>professionnel</div>
+          </div>
+        </div>
       </section>
 
       <section>
