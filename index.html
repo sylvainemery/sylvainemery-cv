@@ -72,10 +72,18 @@
         --text-title: #4c566a;
         --accent: #5e81ac;
       }
+
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+      }
+
       body {
         font-family: 'Source Sans Pro', sans-serif;
         color: var(--text-main);
         line-height: 1.4rem;
+        -webkit-text-size-adjust: 100%;
         margin: 1rem;
         background-color: var(--background-main);
       }
@@ -98,8 +106,12 @@
       h3 {
         font-size: 1.125rem;
         font-family: 'Archivo Narrow', sans-serif;
-        margin-block-end: 0;
+        margin-block-end: 0.5rem;
         color: var(--text-title);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
       }
 
       p {
@@ -158,20 +170,30 @@
 
       .company {
         font-weight: bold;
+        margin-right: 0.5rem;
+      }
+      .company::after {
+        content: ', ';
       }
 
       .location {
         font-weight: bold;
+        display: none;
+      }
+      .location::after {
+        content: ' - ';
       }
 
       .position {
-        font-style: italic;
+        font-weight: normal;
+        flex-grow: 1;
       }
 
       .period {
-        font-size: 0.875rem;
-        margin-block-start: 0;
-        margin-block-end: 0.5rem;
+        font-weight: normal;
+        color: var(--accent);
+        text-align: end;
+        flex-grow: 1;
       }
 
       .addtnlcontext {
@@ -181,7 +203,7 @@
   </head>
 
   <body>
-    <div class="container">
+    <main class="container">
       <header class="aboutme">
         <span
           style="
@@ -211,228 +233,254 @@
         </span>
       </header>
 
-      <h3>
-        Directeur technique avec plus de 20 ans d'exp&eacute;rience, toujours
-        passionn&eacute; par le code.
-      </h3>
-      <ul>
-        <li>
-          Excellente connaissance des technologies web (d&eacute;veloppement,
-          infrastructure, s&eacute;curit&eacute;)
-        </li>
-        <li>
-          Management d'&eacute;quipes techniques et produit (recrutement,
-          &eacute;volution, animation)
-        </li>
-        <li>
-          Analyse des nouveaut&eacute;s technologiques de toute nature (back,
-          front, mobile, hardware&hellip;)
-        </li>
-        <li>Exigence de qualit&eacute;, que ce soit pour le code ou l'UX</li>
-      </ul>
+      <aside>
+        <h3>
+          Directeur technique avec plus de 20 ans d'exp&eacute;rience, toujours
+          passionn&eacute; par le code.
+        </h3>
+        <ul>
+          <li>
+            Excellente connaissance des technologies web (d&eacute;veloppement,
+            infrastructure, s&eacute;curit&eacute;)
+          </li>
+          <li>
+            Management d'&eacute;quipes techniques et produit (recrutement,
+            &eacute;volution, animation)
+          </li>
+          <li>
+            Analyse des nouveaut&eacute;s technologiques de toute nature (back,
+            front, mobile, hardware&hellip;)
+          </li>
+          <li>Exigence de qualit&eacute;, que ce soit pour le code ou l'UX</li>
+        </ul>
+      </aside>
 
-      <h2 tabindex="0">Exp&eacute;rience</h2>
+      <section>
+        <h2 tabindex="0">Exp&eacute;rience</h2>
 
-      <h3 tabindex="0">
-        <span class="company">Chefclub</span>,
-        <span class="location">Paris</span> - <span class="position">CTO</span>
-      </h3>
-      <p class="period">2020 - 2022</p>
-      <p>
-        &Eacute;quipe technique compos&eacute;e de d&eacute;veloppeurs
-        back/front web/mobile/data, de sysadmins, de product owners, de
-        designers UX/UI.
-      </p>
-      <ul>
-        <li>
-          Refonte technique, produit et design du site web, de l'application
-          mobile et de la boutique en ligne.
-        </li>
-        <li>Migration de l'infra depuis GCP vers AWS.</li>
-        <li>
-          R&eacute;alisation technique des lives multicast&eacute;s sur les
-          r&eacute;seaux sociaux.
-        </li>
-      </ul>
-      <p>Quelques technologies utilis&eacute;es&nbsp;:</p>
-      <ul>
-        <li>
-          Python/Django, ReactJS/Gatby, React Native, docker, AWS, GCP, GitHub,
-          JIRA, Figma, Shopify, OBS.
-        </li>
-      </ul>
+        <section>
+          <h3 tabindex="0">
+            <span class="company">Chefclub</span>
+            <span class="location">Paris</span>
+            <span class="position">CTO</span>
+            <span class="period">2020 - 2022</span>
+          </h3>
+          <p>
+            &Eacute;quipe technique compos&eacute;e de d&eacute;veloppeurs
+            back/front web/mobile/data, de sysadmins, de product owners, de
+            designers UX/UI.
+          </p>
+          <ul>
+            <li>
+              Refonte technique, produit et design du site web, de l'application
+              mobile et de la boutique en ligne.
+            </li>
+            <li>Migration de l'infra depuis GCP vers AWS.</li>
+            <li>
+              R&eacute;alisation technique des lives multicast&eacute;s sur les
+              r&eacute;seaux sociaux.
+            </li>
+          </ul>
+          <p>Quelques technologies utilis&eacute;es&nbsp;:</p>
+          <ul>
+            <li>
+              Python/Django, ReactJS/Gatby, React Native, docker, AWS, GCP,
+              GitHub, JIRA, Figma, Shopify, OBS.
+            </li>
+          </ul>
+        </section>
 
-      <h3 tabindex="0">
-        <span class="company">John Paul (groupe Accor)</span>,
-        <span class="location">Paris</span> - <span class="position">CTO</span>
-      </h3>
-      <p class="period">2018 - 2020</p>
-      <p>
-        &Eacute;quipe technique compos&eacute;e de d&eacute;veloppeurs, de
-        devops, de sysadmins, de chefs de projets.
-      </p>
-      <ul>
-        <li>Structuration et staffing de l'&eacute;quipe.</li>
-        <li>
-          Architecture et d&eacute;veloppement d'un nouveau produit
-          d&eacute;clinable en marque blanche.
-        </li>
-        <li>
-          &Eacute;l&eacute;vation du niveau de s&eacute;curit&eacute; du code et
-          de l'infrastructure (certification PCI-DSS Level 1).
-        </li>
-        <li>
-          Documentation de s&eacute;curit&eacute; pour des clients du milieu
-          bancaire.
-        </li>
-      </ul>
-      <p>Quelques technologies utilis&eacute;es&nbsp;:</p>
-      <ul>
-        <li>
-          Python/Django, Vue.JS, Android/Kotlin &amp; iOS/Swift, docker, stack
-          HashiCorp, AWS, Gitlab.
-        </li>
-      </ul>
+        <section>
+          <h3 tabindex="0">
+            <span class="company">John Paul (groupe Accor)</span>
+            <span class="location">Paris</span>
+            <span class="position">CTO</span>
+            <span class="period">2018 - 2020</span>
+          </h3>
+          <p>
+            &Eacute;quipe technique compos&eacute;e de d&eacute;veloppeurs, de
+            devops, de sysadmins, de chefs de projets.
+          </p>
+          <ul>
+            <li>Structuration et staffing de l'&eacute;quipe.</li>
+            <li>
+              Architecture et d&eacute;veloppement d'un nouveau produit
+              d&eacute;clinable en marque blanche.
+            </li>
+            <li>
+              &Eacute;l&eacute;vation du niveau de s&eacute;curit&eacute; du
+              code et de l'infrastructure (certification PCI-DSS Level 1).
+            </li>
+            <li>
+              Documentation de s&eacute;curit&eacute; pour des clients du milieu
+              bancaire.
+            </li>
+          </ul>
+          <p>Quelques technologies utilis&eacute;es&nbsp;:</p>
+          <ul>
+            <li>
+              Python/Django, Vue.JS, Android/Kotlin &amp; iOS/Swift, docker,
+              stack HashiCorp, AWS, Gitlab.
+            </li>
+          </ul>
+        </section>
 
-      <h3 tabindex="0">
-        <span class="company">1000mercis (devenu Numberly)</span>,
-        <span class="location">Paris</span> - <span class="position">CTO</span>
-      </h3>
-      <p class="period">2000 - 2018</p>
-      <p>
-        Depuis le d&eacute;but en charge de l'ensemble de l'&eacute;quipe
-        technique, qui est pass&eacute;e de 1 personne en 2000 &agrave; 120
-        personnes en 2018, r&eacute;partie en 4 m&eacute;tiers&nbsp;: dev web
-        (JS, Python, emails), data/BI (SQL Server, Hadoop), dev mobile (iOS,
-        Android), sysadmin.
-      </p>
-      <p>Membre du comit&eacute; ex&eacute;cutif&nbsp;:</p>
-      <ul>
-        <li>Introduction en Bourse en 2006.</li>
-        <li>
-          Organisation de l'expansion du groupe &agrave; l'international
-          (bureaux dans 7 pays en 2018).
-        </li>
-        <li>
-          Rachat de Ocito (SMS &amp; app mobiles) en 2008, de Matiro (trading
-          RTB) en 2013 et Kiwapp (collecte in-store) en 2015, avec notamment la
-          r&eacute;alisation de la due diligence technique.
-        </li>
-        <li>CA 2017&nbsp;: 58,7 M&euro;</li>
-      </ul>
-      <p>Parmi les derniers projets mis en place&nbsp;:</p>
-      <ul>
-        <li>
-          Passage des &eacute;quipes back-end de .net &agrave; Python.<br />
-          <span class="addtnlcontext"
-            >Objectifs&nbsp;: uniformiser les plateformes web et diminuer leurs
-            co&ucirc;ts, favoriser l'&eacute;mulation entre &eacute;quipes et la
-            mobilit&eacute; interne.</span
-          >
-        </li>
-        <li>
-          Migration de MS Exchange et des serveurs de fichiers Windows &agrave;
-          Google Workspace.<br />
-          <span class="addtnlcontext"
-            >Objectifs&nbsp;: simplicit&eacute; d'acc&egrave;s sur devices
-            mobiles, meilleure utilisation cross-platform (emails, fichiers,
-            instant messaging).</span
-          >
-        </li>
-        <li>
-          Petits-d&eacute;jeuners techniques mensuels et s&eacute;minaires
-          annuels<br />
-          <span class="addtnlcontext"
-            >Objectifs&nbsp;: faire intervenir des d&eacute;veloppeurs sur des
-            sujets techniques qui les passionnent. Pr&eacute;senter la roadmap
-            &agrave; tous les d&eacute;veloppeurs, mettre en avant des projets
-            ou technologies.</span
-          >
-        </li>
-        <li>
-          Hack nights.<br />
-          <span class="addtnlcontext"
-            >Objectifs&nbsp;: proposer aux d&eacute;veloppeurs d'utiliser les
-            langages et technologies de leur choix pendant une soir&eacute;e et
-            sur un th&egrave;me impos&eacute;. Apprentissage et brassage de
-            technologies inter-&eacute;quipes.</span
-          >
-        </li>
-        <li>PoC clients sur Google Glass, chatbots, IoT.</li>
-      </ul>
-      <p>Quelques autres projets majeurs mis en place&nbsp;:</p>
-      <ul>
-        <li>
-          R&eacute;alisation des sites B2C de listes de cadeaux millemercis.com
-          et millemercismariage.com en 2000/2001.
-        </li>
-        <li>
-          Cr&eacute;ation des premi&egrave;res op&eacute;rations webmarketing de
-          collecte en France.
-        </li>
-        <li>
-          Mise en place de la base de donn&eacute;es publicitaire Email-Attitude
-          (plus de 38 millions d'individus en Europe en 2018).
-        </li>
-        <li>
-          Mise en place de bases de donn&eacute;es CRM de grands comptes
-          contenant plusieurs millions d'individus.
-        </li>
-        <li>
-          Mise en place d'une solution de retargeting de conqu&ecirc;te par
-          email.
-        </li>
-      </ul>
-      <p>Quelques technologies utilis&eacute;es dans le groupe&nbsp;:</p>
-      <ul>
-        <li>
-          Python, Vue.JS, dev natif Android &amp; iOS, SQL Server, Hadoop,
-          MongoDB, PostgreSQL, Git.
-        </li>
-      </ul>
+        <section>
+          <h3 tabindex="0">
+            <span class="company">1000mercis (devenu Numberly)</span>
+            <span class="location">Paris</span>
+            <span class="position">CTO</span>
+            <span class="period">2000 - 2018</span>
+          </h3>
+          <p>
+            Depuis le d&eacute;but en charge de l'ensemble de l'&eacute;quipe
+            technique, qui est pass&eacute;e de 1 personne en 2000 &agrave; 120
+            personnes en 2018, r&eacute;partie en 4 m&eacute;tiers&nbsp;: dev
+            web (JS, Python, emails), data/BI (SQL Server, Hadoop), dev mobile
+            (iOS, Android), sysadmin.
+          </p>
+          <p>Membre du comit&eacute; ex&eacute;cutif&nbsp;:</p>
+          <ul>
+            <li>Introduction en Bourse en 2006.</li>
+            <li>
+              Organisation de l'expansion du groupe &agrave; l'international
+              (bureaux dans 7 pays en 2018).
+            </li>
+            <li>
+              Rachat de Ocito (SMS &amp; app mobiles) en 2008, de Matiro
+              (trading RTB) en 2013 et Kiwapp (collecte in-store) en 2015, avec
+              notamment la r&eacute;alisation de la due diligence technique.
+            </li>
+            <li>CA 2017&nbsp;: 58,7 M&euro;</li>
+          </ul>
+          <p>Parmi les derniers projets mis en place&nbsp;:</p>
+          <ul>
+            <li>
+              Passage des &eacute;quipes back-end de .net &agrave; Python.<br />
+              <span class="addtnlcontext"
+                >Objectifs&nbsp;: uniformiser les plateformes web et diminuer
+                leurs co&ucirc;ts, favoriser l'&eacute;mulation entre
+                &eacute;quipes et la mobilit&eacute; interne.</span
+              >
+            </li>
+            <li>
+              Migration de MS Exchange et des serveurs de fichiers Windows
+              &agrave; Google Workspace.<br />
+              <span class="addtnlcontext"
+                >Objectifs&nbsp;: simplicit&eacute; d'acc&egrave;s sur devices
+                mobiles, meilleure utilisation cross-platform (emails, fichiers,
+                instant messaging).</span
+              >
+            </li>
+            <li>
+              Petits-d&eacute;jeuners techniques mensuels et s&eacute;minaires
+              annuels<br />
+              <span class="addtnlcontext"
+                >Objectifs&nbsp;: faire intervenir des d&eacute;veloppeurs sur
+                des sujets techniques qui les passionnent. Pr&eacute;senter la
+                roadmap &agrave; tous les d&eacute;veloppeurs, mettre en avant
+                des projets ou technologies.</span
+              >
+            </li>
+            <li>
+              Hack nights.<br />
+              <span class="addtnlcontext"
+                >Objectifs&nbsp;: proposer aux d&eacute;veloppeurs d'utiliser
+                les langages et technologies de leur choix pendant une
+                soir&eacute;e et sur un th&egrave;me impos&eacute;.
+                Apprentissage et brassage de technologies
+                inter-&eacute;quipes.</span
+              >
+            </li>
+            <li>PoC clients sur Google Glass, chatbots, IoT.</li>
+          </ul>
+          <p>Quelques autres projets majeurs mis en place&nbsp;:</p>
+          <ul>
+            <li>
+              R&eacute;alisation des sites B2C de listes de cadeaux
+              millemercis.com et millemercismariage.com en 2000/2001.
+            </li>
+            <li>
+              Cr&eacute;ation des premi&egrave;res op&eacute;rations
+              webmarketing de collecte en France.
+            </li>
+            <li>
+              Mise en place de la base de donn&eacute;es publicitaire
+              Email-Attitude (plus de 38 millions d'individus en Europe en
+              2018).
+            </li>
+            <li>
+              Mise en place de bases de donn&eacute;es CRM de grands comptes
+              contenant plusieurs millions d'individus.
+            </li>
+            <li>
+              Mise en place d'une solution de retargeting de conqu&ecirc;te par
+              email.
+            </li>
+          </ul>
+          <p>Quelques technologies utilis&eacute;es dans le groupe&nbsp;:</p>
+          <ul>
+            <li>
+              Python, Vue.JS, dev natif Android &amp; iOS, SQL Server, Hadoop,
+              MongoDB, PostgreSQL, Git.
+            </li>
+          </ul>
+        </section>
 
-      <h3 tabindex="0">
-        <span class="company">AS/Tech (devenu Axones)</span>,
-        <span class="location">Paris</span> -
-        <span class="position">D&eacute;veloppeur</span>
-      </h3>
-      <p class="period">1999 - 2000</p>
-      <p>
-        SSII de 50 personnes dans laquelle j'ai r&eacute;alis&eacute; et
-        maintenu quelques projets en VB et en ASP.
-      </p>
+        <section>
+          <h3 tabindex="0">
+            <span class="company">AS/Tech (devenu Axones)</span>
+            <span class="location">Paris</span>
+            <span class="position">D&eacute;veloppeur</span>
+            <span class="period">1999 - 2000</span>
+          </h3>
+          <p>
+            SSII de 50 personnes dans laquelle j'ai r&eacute;alis&eacute; et
+            maintenu quelques projets en VB et en ASP.
+          </p>
+        </section>
+      </section>
 
-      <h2 tabindex="0">Formation</h2>
+      <section>
+        <h2 tabindex="0">Formation</h2>
 
-      <h3>
-        <span class="company">FIIFO (Polytech Paris-Saclay)</span>,
-        <span class="location">Orsay</span> -
-        <span class="position">Ing&eacute;nieur en informatique</span>
-      </h3>
-      <p class="period">1996 - 1999</p>
+        <section>
+          <h3>
+            <span class="company">FIIFO (Polytech Paris-Saclay)</span>
+            <span class="location">Orsay</span>
+            <span class="position">Ing&eacute;nieur en informatique</span>
+            <span class="period">1996 - 1999</span>
+          </h3>
+        </section>
 
-      <h3>
-        <span class="company">IUT de Paris V</span>,
-        <span class="location">Paris</span> -
-        <span class="position">DUT informatique</span>
-      </h3>
-      <p class="period">1994 - 1996</p>
+        <section>
+          <h3>
+            <span class="company">IUT de Paris V</span>
+            <span class="location">Paris</span>
+            <span class="position">DUT informatique</span>
+            <span class="period">1994 - 1996</span>
+          </h3>
+        </section>
 
-      <h3>
-        <span class="company">Lyc&eacute;e Condorcet</span>,
-        <span class="location">Limay</span> -
-        <span class="position">Bac C</span>
-      </h3>
-      <p class="period">1994</p>
+        <section>
+          <h3>
+            <span class="company">Lyc&eacute;e Condorcet</span>
+            <span class="location">Limay</span>
+            <span class="position">Bac C</span>
+            <span class="period">1994</span>
+          </h3>
+        </section>
+      </section>
 
-      <h2 tabindex="0">Int&eacute;r&ecirc;ts</h2>
-
-      <p>
-        Passionn&eacute; par l'innovation technique en g&eacute;n&eacute;ral, et
-        particuli&egrave;rement l'IoT et la domotique.
-      </p>
-      <p>Projets personnels d'applications Android.</p>
-      <p>Attach&eacute; &agrave; la philosophie open source.</p>
-    </div>
+      <section>
+        <h2 tabindex="0">Int&eacute;r&ecirc;ts</h2>
+        <p>
+          Passionn&eacute; par l'innovation technique en g&eacute;n&eacute;ral,
+          et particuli&egrave;rement l'IoT et la domotique.
+        </p>
+        <p>Projets personnels d'applications Android.</p>
+        <p>Attach&eacute; &agrave; la philosophie open source.</p>
+      </section>
+    </main>
   </body>
 </html>
