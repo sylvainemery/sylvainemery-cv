@@ -205,6 +205,25 @@
         border-radius: 50%;
       }
 
+      .skills {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-block-start: 1rem;
+        /* font-size: 0.8rem; */
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+      }
+      .skills > li {
+        display: inline-block;
+        padding: 0.2rem 1rem;
+        margin-inline-end: 0.25rem;
+        margin-block-end: 0.5rem;
+        background: var(--background-main);
+        border-radius: 0.25rem;
+      }
+
       .company {
         font-weight: bold;
         margin-right: 0.5rem;
@@ -252,7 +271,7 @@
       <header>
         <span class="about">
           <h1 tabindex="0">Sylvain Emery</h1>
-          <h2>CTO</h2>
+          <h2>CTO / Head of Engineering</h2>
           <ul>
             <li><a href="mailto:sylvain@emery.sc">sylvain@emery.sc</a></li>
             <li><a href="tel:+33613232102">+33 6 13 23 21 02</a></li>
@@ -279,10 +298,17 @@
 
       <aside>
         <h3>
-          Directeur technique avec plus de 20 ans d'exp&eacute;rience, toujours
-          passionn&eacute; par le code.
+          Directeur technique avec plus de 20 ans d'exp&eacute;rience dans le
+          management, l'architecture et le code.
         </h3>
-        <ul>
+        <ul class="skills">
+          <li>Management et scaling d'équipe</li>
+          <li>Architecture soft et cloud</li>
+          <li>Exigence de qualité</li>
+          <li>Focus sur le delivery</li>
+          <li>Orienté business</li>
+        </ul>
+        <!--ul>
           <li>
             Excellente connaissance des technologies web (d&eacute;veloppement,
             infrastructure, s&eacute;curit&eacute;)
@@ -296,7 +322,7 @@
             front, mobile, hardware&hellip;)
           </li>
           <li>Exigence de qualit&eacute;, que ce soit pour le code ou l'UX</li>
-        </ul>
+        </ul-->
       </aside>
 
       <section>
