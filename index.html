@@ -143,6 +143,9 @@
         }
       }
       @media print {
+        body {
+          background-color: #fff;
+        }
         main {
           margin: 0;
           max-width: unset;
@@ -183,7 +186,7 @@
       .about li:not(:last-child) {
         margin-block-end: 0.5rem;
       }
-      @media (min-width: 48rem) {
+      @media (min-width: 48rem), print {
         .about ul {
           flex-direction: row;
         }
