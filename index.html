@@ -101,8 +101,7 @@
         font-size: 2rem;
         font-family: 'se-name', serif;
         color: var(--accent);
-        margin: 0;
-        margin-block-end: 0.5rem;
+        margin-block: 0 0.5rem;
       }
 
       h2 {
@@ -116,7 +115,7 @@
       h3 {
         font-size: 1rem;
         font-family: 'Noto Serif', serif;
-        margin-block-end: 0.5rem;
+        margin: 0;
         color: var(--text-title);
         display: flex;
         flex-direction: row;
@@ -125,17 +124,17 @@
       }
 
       p {
-        margin-block-start: 0;
-        margin-block-end: 0;
+        margin: 0;
       }
 
       ul {
         margin-block: 0 0.5rem;
-        padding-inline-start: 2rem;
+        padding-inline: 2rem 0;
       }
 
       a {
         color: var(--accent);
+        text-decoration: none;
       }
 
       main {
@@ -160,7 +159,7 @@
           max-width: unset;
           border-radius: 0;
           box-shadow: unset;
-          padding: unset;
+          padding: 0;
         }
         .body {
           margin: 0;
@@ -172,6 +171,10 @@
         flex-direction: row;
       }
 
+      section {
+        margin-block: 0 1rem;
+      }
+
       .about {
         display: flex;
         flex-grow: 1;
@@ -181,8 +184,7 @@
       }
 
       .about h2 {
-        margin: 0;
-        margin-block-end: 0.5rem;
+        margin-block: 0 0.5rem;
       }
 
       .about ul {
@@ -207,10 +209,6 @@
         }
       }
 
-      .about a {
-        text-decoration: none;
-      }
-
       .portrait {
         flex-grow: 0;
         flex-shrink: 0;
@@ -224,29 +222,29 @@
 
       .catchphrase {
         justify-content: center;
+        margin-block: 0.75rem 0;
       }
+
       .skills {
         list-style: none;
-        margin: 0;
         padding: 0;
-        margin-block-start: 1rem;
-        /* font-size: 0.8rem; */
+        margin-block: 1rem 0;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
+        row-gap: 0.5rem;
+        column-gap: 0.5rem;
       }
       .skills > li {
         display: inline-block;
         padding: 0.2rem 1rem;
-        margin-inline-end: 0.25rem;
-        margin-block-end: 0.5rem;
         background: var(--background-main);
         border-radius: 0.25rem;
       }
 
       .company {
         font-weight: bold;
-        margin-right: 0.5rem;
+        margin-inline: 0 0.5rem;
       }
       .company::after {
         content: ', ';
@@ -270,11 +268,16 @@
         color: var(--accent);
         text-align: end;
         flex-grow: 1;
-        margin-inline-start: 1rem;
+        margin-inline: 1rem 0;
       }
 
       .addtnlcontext {
         font-style: italic;
+      }
+
+      .companydesc {
+        font-style: italic;
+        margin-block: 0 0.2rem;
       }
 
       .langtable {
@@ -289,14 +292,14 @@
       .header2 {
         display: flex;
         align-items: baseline;
-        margin-block: 2rem 1rem;
+        margin-block: 2rem 0.5rem;
       }
       .separator {
         height: 1px;
         background: var(--accent);
         flex-grow: 1;
         vertical-align: baseline;
-        margin-inline-start: 1rem;
+        margin-inline: 1rem 0;
       }
     </style>
   </head>
@@ -373,10 +376,10 @@
             <span class="position">CTO</span>
             <span class="period">2020 - 2022</span>
           </h3>
-          <i
-            >Chefclub est un m&eacute;dia culinaire avec plus de 100 millions de
-            followers sur les r&eacute;seaux sociaux.</i
-          >
+          <div class="companydesc">
+            Chefclub est un m&eacute;dia culinaire avec plus de 100 millions de
+            followers sur les r&eacute;seaux sociaux.
+          </div>
           <p>
             Management de l'&eacute;quipe technique&nbsp;: d&eacute;veloppeurs
             web, mobile, back, data, sysadmins, product owners et designers
@@ -410,10 +413,9 @@
             <span class="position">CTO</span>
             <span class="period">2018 - 2020</span>
           </h3>
-          <i
-            >John Paul propose un service de conciergerie multicanal en
-            B2B2C.</i
-          >
+          <div class="companydesc">
+            John Paul propose un service de conciergerie multicanal en B2B2C.
+          </div>
           <p>
             Management de l'&eacute;quipe technique compos&eacute;e de
             d&eacute;veloppeurs, de devops, de sysadmins.
@@ -447,10 +449,10 @@
             <span class="position">CTO</span>
             <span class="period">2000 - 2018</span>
           </h3>
-          <i
-            >1000mercis est une agence marketing et technologique qui
-            g&egrave;re le CRM de grands groupes.</i
-          >
+          <div class="companydesc">
+            1000mercis est une agence marketing et technologique qui g&egrave;re
+            le CRM de grands groupes.
+          </div>
           <p>
             Premier d&eacute;veloppeur &agrave; la fondation de 1000mercis, j'ai
             toujours &eacute;t&eacute; responsable de l'&eacute;quipe technique
@@ -474,34 +476,33 @@
           <p>Actions notables accomplies&nbsp;:</p>
           <ul>
             <li>
-              Transition des &eacute;quipes back-end de .net &agrave; Python.<br />
-              <span class="addtnlcontext"
-                >Objectifs atteints&nbsp;: uniformiser les plateformes web et
+              Transition des &eacute;quipes back-end de .net &agrave; Python.
+              <div class="addtnlcontext">
+                Objectifs atteints&nbsp;: uniformiser les plateformes web et
                 diminuer leurs co&ucirc;ts, favoriser l'&eacute;mulation entre
-                &eacute;quipes et la mobilit&eacute; interne.</span
-              >
+                &eacute;quipes et la mobilit&eacute; interne.
+              </div>
             </li>
             <li>
               Migration de MS Exchange et des serveurs de fichiers Windows
-              &agrave; Google Workspace.<br />
-              <span class="addtnlcontext"
-                >Objectifs atteints&nbsp;: simplicit&eacute; d'acc&egrave;s sur
+              &agrave; Google Workspace.
+              <div class="addtnlcontext">
+                Objectifs atteints&nbsp;: simplicit&eacute; d'acc&egrave;s sur
                 devices mobiles, meilleure utilisation cross-platform (emails,
                 fichiers, instant messaging), le tout avec des formations
-                con&ccedil;ues et dispens&eacute;es en interne.</span
-              >
+                con&ccedil;ues et dispens&eacute;es en interne.
+              </div>
             </li>
             <li>
               Animation de l'&eacute;quipe tech via des s&eacute;minaires
-              annuels, des petits-d&eacute;jeuners mensuels et des hack
-              nights.<br />
-              <span class="addtnlcontext"
-                >Objectifs atteints: pr&eacute;senter la roadmap &agrave; tous
+              annuels, des petits-d&eacute;jeuners mensuels et des hack nights.
+              <div class="addtnlcontext">
+                Objectifs atteints: pr&eacute;senter la roadmap &agrave; tous
                 les membres de l'&eacute;quipe, amener chacun &agrave;
                 intervenir sur des sujets qui le passionnent, stimuler
                 l'apprentissage et le brassage des technologies
-                inter-&eacute;quipes.</span
-              >
+                inter-&eacute;quipes.
+              </div>
             </li>
           </ul>
           <p>Quelques projets majeurs r&eacute;alis&eacute;s&nbsp;:</p>
@@ -542,11 +543,11 @@
             <span class="position">D&eacute;veloppeur</span>
             <span class="period">1999 - 2000</span>
           </h3>
-          <p>
+          <div class="companydesc">
             SSII de 50 personnes, co-dirig&eacute;e par les fondateurs de
-            Caramail, dans laquelle j'ai r&eacute;alis&eacute; et maintenu
-            quelques projets en VB et en ASP.
-          </p>
+            Caramail.
+          </div>
+          <p>R&eacute;alisation et maintien de projets en VB et en ASP.</p>
         </section>
       </section>
 
