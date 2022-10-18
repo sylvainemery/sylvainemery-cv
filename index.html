@@ -155,7 +155,7 @@
 
       main {
         margin: auto;
-        max-width: 950px;
+        max-width: 58rem;
         border-radius: 0.2rem;
         background-color: var(--background-paper);
         box-shadow: var(--shadow-paper);
@@ -233,28 +233,33 @@
         margin-block: 1rem 0;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-evenly;
+        justify-content: space-around;
         row-gap: 0.5rem;
         font-size: 0.9rem;
       }
+      @media (min-width: 48rem) {
+        .skills {
+          justify-content: space-between;
+        }
+      }
+
       .skills > li {
         display: inline-block;
-        padding: 0.2rem 0.5rem;
+        padding: 0.2rem 0.4rem;
         background: var(--background-main);
         border-radius: 0.25rem;
       }
 
       .company {
-        font-weight: bold;
-        margin-inline: 0 0.5rem;
-      }
-      .company::after {
-        content: ', ';
+        font-weight: normal;
       }
 
       .position {
-        font-weight: normal;
-        flex-grow: 1;
+        font-weight: bold;
+        margin-inline: 0 0.5rem;
+      }
+      .position::after {
+        content: ', ';
       }
 
       .period {
@@ -368,8 +373,8 @@
 
         <section>
           <h3 tabindex="0">
-            <span class="company">Chefclub</span>
             <span class="position">CTO</span>
+            <span class="company">Chefclub</span>
             <span class="period">2020 - 2022</span>
           </h3>
           <div class="companydesc">
@@ -395,8 +400,8 @@
 
         <section>
           <h3 tabindex="0">
-            <span class="company">John Paul</span>
             <span class="position">CTO</span>
+            <span class="company">John Paul</span>
             <span class="period">2018 - 2020</span>
           </h3>
           <div class="companydesc">
@@ -423,8 +428,8 @@
 
         <section>
           <h3 tabindex="0">
-            <span class="company">1000mercis/Numberly</span>
             <span class="position">CTO</span>
+            <span class="company">1000mercis/Numberly</span>
             <span class="period">2000 - 2018</span>
           </h3>
           <div class="companydesc">
@@ -465,8 +470,9 @@
               grands comptes contenant plusieurs millions d'individus.
             </li>
             <li>
-              Migration d'une infra Microsoft &agrave; Google Workspace, avec
-              formations con&ccedil;ues et dispens&eacute;es en interne.
+              Migration d'une infra on-premise Microsoft &agrave; Google
+              Workspace, avec formations con&ccedil;ues et dispens&eacute;es en
+              interne.
             </li>
           </ul>
         </section>
@@ -493,16 +499,16 @@
 
         <section>
           <h3>
-            <span class="company">FIIFO (Polytech Paris-Saclay)</span>
             <span class="position">Ing&eacute;nieur en informatique</span>
+            <span class="company">FIIFO (Polytech Paris-Saclay)</span>
             <span class="period">1996 - 1999</span>
           </h3>
         </section>
 
         <section>
           <h3>
-            <span class="company">IUT de Paris V</span>
             <span class="position">DUT informatique</span>
+            <span class="company">IUT de Paris V</span>
             <span class="period">1994 - 1996</span>
           </h3>
         </section>
@@ -527,13 +533,13 @@
 
       <section>
         <div class="header2">
-          <h2 tabindex="0">Tech skills</h2>
+          <h2 tabindex="0">Tech</h2>
           <div class="separator"></div>
         </div>
         <div class="langtable">
           <div>
             <div><h3>Front-end</h3></div>
-            <div>ReactJS, Gatsby, Vue.js, React Native, natif mobile</div>
+            <div>React, Gatsby, Vue.js, React Native, natif mobile</div>
           </div>
           <div>
             <div><h3>Back-end</h3></div>
