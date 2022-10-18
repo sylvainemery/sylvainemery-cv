@@ -114,7 +114,7 @@
       }
 
       h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-family: 'se-name', serif;
         color: var(--accent);
         margin-block: 0 0.5rem;
@@ -144,7 +144,7 @@
       }
 
       ul {
-        margin-block: 0 0.5rem;
+        margin: 0;
         padding-inline: 2rem 0;
       }
 
@@ -155,7 +155,7 @@
 
       main {
         margin: auto;
-        max-width: 48rem;
+        max-width: 950px;
         border-radius: 0.2rem;
         background-color: var(--background-paper);
         box-shadow: var(--shadow-paper);
@@ -166,21 +166,6 @@
           padding: 2rem;
         }
       }
-      @media print {
-        body {
-          background-color: #fff;
-        }
-        main {
-          margin: 0;
-          max-width: unset;
-          border-radius: 0;
-          box-shadow: unset;
-          padding: 0;
-        }
-        .body {
-          margin: 0;
-        }
-      }
 
       header {
         display: flex;
@@ -188,7 +173,7 @@
       }
 
       section {
-        margin-block: 0 1rem;
+        margin-block: 0 0.6rem;
       }
 
       .about {
@@ -248,13 +233,13 @@
         margin-block: 1rem 0;
         display: flex;
         flex-flow: row wrap;
-        justify-content: center;
+        justify-content: space-evenly;
         row-gap: 0.5rem;
-        column-gap: 0.5rem;
+        font-size: 0.9rem;
       }
       .skills > li {
         display: inline-block;
-        padding: 0.2rem 1rem;
+        padding: 0.2rem 0.5rem;
         background: var(--background-main);
         border-radius: 0.25rem;
       }
@@ -280,10 +265,6 @@
         margin-inline: 1rem 0;
       }
 
-      .addtnlcontext {
-        font-style: italic;
-      }
-
       .companydesc {
         font-style: italic;
         margin-block: 0 0.2rem;
@@ -291,8 +272,8 @@
 
       .langtable {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
-        grid-gap: 0.5rem;
+        grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+        grid-gap: 1rem;
       }
       .langtable h3 {
         margin: 0;
@@ -301,7 +282,7 @@
       .header2 {
         display: flex;
         align-items: baseline;
-        margin-block: 2rem 0.5rem;
+        margin-block: 1.5rem 0.5rem;
       }
       .separator {
         height: 1px;
@@ -309,6 +290,27 @@
         flex-grow: 1;
         vertical-align: baseline;
         margin-inline: 1rem 0;
+      }
+
+      @media print {
+        body {
+          background-color: #fff;
+          margin: 0;
+        }
+        main {
+          margin: 0;
+          max-width: unset;
+          border-radius: 0;
+          box-shadow: unset;
+          padding: 0;
+        }
+        .body {
+          margin: 0;
+        }
+
+        :root {
+          font-size: 13.4px;
+        }
       }
     </style>
   </head>
@@ -320,9 +322,9 @@
           <h1 tabindex="0">Sylvain Emery</h1>
           <h2>CTO</h2>
           <ul>
+            <li>Paris</li>
             <li><a href="mailto:sylvain@emery.sc">sylvain@emery.sc</a></li>
             <li><a href="tel:+33613232102">+33 6 13 23 21 02</a></li>
-            <li>Paris</li>
             <li>
               <a href="https://www.linkedin.com/in/sylvainemery/"
                 >linkedin.com/in/sylvainemery</a
@@ -371,31 +373,22 @@
             <span class="period">2020 - 2022</span>
           </h3>
           <div class="companydesc">
-            M&eacute;dia culinaire avec plus de 100 millions de followers sur
-            les r&eacute;seaux sociaux.
+            M&eacute;dia culinaire leader mondial avec plus de 100 millions de
+            followers sur les r&eacute;seaux sociaux.
           </div>
           <p>
             Management et staffing de l'&eacute;quipe technique (10
             personnes)&nbsp;: d&eacute;veloppeurs web, mobile, back, data,
             sysadmins, product owners et designers UX/UI.
           </p>
-          <p>Projets men&eacute;s&nbsp;:</p>
           <ul>
             <li>
-              Refonte technique/produit/design du site web, de l'application
-              mobile et de la boutique en ligne.
+              Refonte technique/produit/design du site web (perf/SEO), de
+              l'application mobile et de la boutique en ligne.
             </li>
-            <li>Migration de l'infra depuis GCP vers AWS.</li>
             <li>
-              R&eacute;alisation technique des lives multicast&eacute;s sur les
-              r&eacute;seaux sociaux.
-            </li>
-          </ul>
-          <p>Technologies utilis&eacute;es&nbsp;:</p>
-          <ul>
-            <li>
-              Python/Django, React/Gatsby, React Native, Docker, AWS, GCP,
-              GitHub, Jira, Figma, Shopify, OBS.
+              R&eacute;duction des co&ucirc;ts infra par la migration de GCP
+              vers AWS.
             </li>
           </ul>
         </section>
@@ -419,20 +412,11 @@
             <li>Structuration et staffing de l'&eacute;quipe.</li>
             <li>
               &Eacute;l&eacute;vation du niveau de s&eacute;curit&eacute; du
-              code et de l'infrastructure pour &ecirc;tre certifi&eacute;
-              PCI-DSS Level 1 &agrave; la demande d'un client du milieu
-              bancaire.
+              code et de l'infrastructure pour certification PCI-DSS Level 1.
             </li>
             <li>
               Architecture et d&eacute;veloppement d'un nouveau produit
               d&eacute;clinable en marque blanche.
-            </li>
-          </ul>
-          <p>Technologies utilis&eacute;es&nbsp;:</p>
-          <ul>
-            <li>
-              Python/Django, Vue, Kotlin/Swift, Docker, stack HashiCorp, AWS,
-              GitLab.
             </li>
           </ul>
         </section>
@@ -444,7 +428,7 @@
             <span class="period">2000 - 2018</span>
           </h3>
           <div class="companydesc">
-            Leader sur son marché, agence marketing et technologique qui
+            Leader sur son march&eacute;, agence marketing et technologique qui
             g&egrave;re le CRM de grands groupes.
           </div>
           <p>
@@ -453,84 +437,41 @@
             technique (web/data/mobile/sysadmin), qui a atteint 120 personnes en
             2018.
           </p>
-          <p>Membre du comit&eacute; ex&eacute;cutif&nbsp;:</p>
+          <p>En tant que membre du comit&eacute; ex&eacute;cutif&nbsp;:</p>
           <ul>
             <li>Introduction en Bourse en 2006.</li>
             <li>
-              Rachat de 3 soci&eacute;t&eacute;s, incluant la r&eacute;alisation
-              de la due diligence technique.
+              Rachat et int&eacute;gration de 3 soci&eacute;t&eacute;s, incluant
+              la r&eacute;alisation de la due diligence technique.
             </li>
             <li>
-              Expansion du groupe &agrave; l'international (bureaux dans 7 pays
-              en 2018).
-            </li>
-            <li>R&eacute;f&eacute;rent technique aupr&egrave;s des clients.</li>
-            <li>CA 2017&nbsp;: 58,7 M&euro;.</li>
-          </ul>
-          <p>Actions notables accomplies&nbsp;:</p>
-          <ul>
-            <li>
-              Transition des &eacute;quipes back-end de .net &agrave; Python.
-              <div class="addtnlcontext">
-                Objectifs atteints&nbsp;: uniformiser les plateformes web et
-                diminuer leurs co&ucirc;ts, favoriser l'&eacute;mulation entre
-                &eacute;quipes et la mobilit&eacute; interne.
-              </div>
-            </li>
-            <li>
-              Migration de MS Exchange et des serveurs de fichiers Windows
-              &agrave; Google Workspace.
-              <div class="addtnlcontext">
-                Objectifs atteints&nbsp;: simplicit&eacute; d'acc&egrave;s sur
-                devices mobiles, meilleure utilisation cross-platform (emails,
-                fichiers, instant messaging), le tout avec des formations
-                con&ccedil;ues et dispens&eacute;es en interne.
-              </div>
-            </li>
-            <li>
-              Animation de l'&eacute;quipe tech via des s&eacute;minaires
-              annuels, des petits-d&eacute;jeuners mensuels et des hack nights.
-              <div class="addtnlcontext">
-                Objectifs atteints: pr&eacute;senter la roadmap &agrave; tous
-                les membres de l'&eacute;quipe, amener chacun &agrave;
-                intervenir sur des sujets qui le passionnent, stimuler
-                l'apprentissage et le brassage des technologies
-                inter-&eacute;quipes.
-              </div>
+              Organisation de l'expansion du groupe &agrave; l'international
+              (bureaux dans 7 pays en 2018).
             </li>
           </ul>
-          <p>Quelques projets majeurs r&eacute;alis&eacute;s&nbsp;:</p>
+          <p>En tant que CTO&nbsp;:</p>
           <ul>
             <li>
-              Cr&eacute;ation des premi&egrave;res op&eacute;rations
-              webmarketing de collecte en France.
+              Structuration, staffing et animation de l'&eacute;quipe tech :
+              croissance continue, d&eacute;tection et accompagnement de leads,
+              mobilit&eacute; interne, changement de technologie backend.
             </li>
             <li>
-              Architecture et mise en oeuvre de la base de donn&eacute;es
-              publicitaire Email-Attitude (plus de 38 millions d'individus
-              qualifi&eacute;s en 2018, provenant de plus de 20 bases
-              partenaires).
+              R&eacute;f&eacute;rent technique aupr&egrave;s des directions
+              informatique/s&eacute;curit&eacute;/marketing des clients.
             </li>
             <li>
-              Architecture et mise en oeuvre de bases de donn&eacute;es CRM de
+              Conception et mise en place de bases de donn&eacute;es CRM de
               grands comptes contenant plusieurs millions d'individus.
             </li>
             <li>
-              Mise en place d'une solution de retargeting de conqu&ecirc;te par
-              email.
-            </li>
-            <li>PoC clients sur Google Glass, chatbots, IoT.</li>
-          </ul>
-          <p>Technologies utilis&eacute;es&nbsp;:</p>
-          <ul>
-            <li>
-              Python, Vue, dev natif Android &amp; iOS, SQL Server, Hadoop,
-              MongoDB, PostgreSQL, GitLab.
+              Migration d'une infra Microsoft &agrave; Google Workspace, avec
+              formations con&ccedil;ues et dispens&eacute;es en interne.
             </li>
           </ul>
         </section>
 
-        <section>
+        <!--section>
           <h3 tabindex="0">
             <span class="company">AS/Tech (devenu Axones)</span>
             <span class="position">D&eacute;veloppeur</span>
@@ -541,7 +482,7 @@
             Caramail.
           </div>
           <p>R&eacute;alisation et maintien de projets en VB et en ASP.</p>
-        </section>
+        </section-->
       </section>
 
       <section>
@@ -586,6 +527,35 @@
 
       <section>
         <div class="header2">
+          <h2 tabindex="0">Tech skills</h2>
+          <div class="separator"></div>
+        </div>
+        <div class="langtable">
+          <div>
+            <div><h3>Front-end</h3></div>
+            <div>ReactJS, Gatsby, Vue.js, React Native, natif mobile</div>
+          </div>
+          <div>
+            <div><h3>Back-end</h3></div>
+            <div>Python, Django, Node.js</div>
+          </div>
+          <div>
+            <div><h3>Data</h3></div>
+            <div>PostgreSQL, SQL Server, MongoDB, Hadoop</div>
+          </div>
+          <div>
+            <div><h3>DevOps/Cloud</h3></div>
+            <div>AWS, GCP, Docker, stack Hashicorp, Kubernetes</div>
+          </div>
+          <div>
+            <div><h3>Misc</h3></div>
+            <div>GitHub, GitLab, Jira, Figma, Shopify</div>
+          </div>
+        </div>
+      </section>
+
+      <!--section>
+        <div class="header2">
           <h2 tabindex="0">Int&eacute;r&ecirc;ts</h2>
           <div class="separator"></div>
         </div>
@@ -595,7 +565,7 @@
         </p>
         <p>Projets personnels d'applications Android.</p>
         <p>Attach&eacute; &agrave; la philosophie open source.</p>
-      </section>
+      </section-->
     </main>
   </body>
 </html>
